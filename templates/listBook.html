@@ -6,16 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Add book</h1>
-    <form action="/add" method = "post">
-        <input type="text" name="b">
-        <input type="submit" value="Add">
-    </form>
-    <ol>
-        {% for _,i in books.items() %}
-                 <li>{{_,i}}</li>
-        {% endfor %}
-
-    </ol>
+    <div class="container">
+        <h1 class="text-center my-5" >Add a new book.</h1>
+        <form action="/add" method="POST">
+            <div class="mb-3">
+                <label for="title" class="form-label">Title</label>
+                <input type="text" class="form-control" id="title" name="title">
+            </div>
+            <div class="mb-3">
+                <label for="author" class="form-label">Author</label>
+                <input type="text" class="form-control" id="author" name="author">
+            </div>
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <textarea class="form-control" id="description" name="description"></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="genre" class="form-label">genre</label>
+                <input type="text" class="form-control" id="genre" name="genre">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
